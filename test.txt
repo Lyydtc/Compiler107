@@ -1,0 +1,33 @@
+program P1;
+    const
+        PI := 3.1415926;
+        g := 9.8;
+    var
+        x,y  :  real;
+        i : integer ; 
+        c: char;
+        b: bool;
+   begin
+        x := 3+5*7;
+        y := 2*x-(4/2+9);
+        b := (x - y) < (x or y);
+        if x>y then
+        begin
+            temp := x;
+            x := y;
+            y := temp; 
+        end;
+	      
+    while b do
+    begin
+        if  x<y then
+        begin
+            y  := y-1;
+        end;
+        else
+        begin
+            x  := x - 1;
+        end;
+        b :=  x<>0;
+    end;
+end
