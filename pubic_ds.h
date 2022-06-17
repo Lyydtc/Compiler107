@@ -17,4 +17,6 @@ struct Token{
     string Sem;
 };
 
+struct Quat{ string q1,q2,q3,q4; };
+
 #endif //COMPILER107_PUBIC_DS_H

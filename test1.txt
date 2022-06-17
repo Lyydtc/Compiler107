@@ -1,0 +1,19 @@
+program P:
+           const  flag = 10;
+           var   r:real;
+                   i,sum: integer;
+                  c:char;
+                  b: bool;
+           begin
+                  r = 3.14;
+                  sum=200;
+                  i  = 1;
+                  b =i<flag;
+                  while  b do
+                      sum=sum+i*i*r; 
+                      i=i+1; 
+                      b=i<flag;
+                  ;
+                  if sum>100  then  sum =6;
+                  ;
+            end

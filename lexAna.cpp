@@ -5,7 +5,7 @@
 
 int lexAna::is_K(string word) //判断关键字
 {
-    for (int i = 0; i < 15; i++) {
+    for (int i = 0; i < 18; i++) {
         if (word == K_list[i])
             return ++i;
     }
@@ -36,7 +36,7 @@ int lexAna::is_C1(string word)//常整数
 {
     int flag1=0;
     if(word[0]=='\0')return 0;
-    if(word[0]>='0'&&word[0]<='9')
+    if(word[0]>='0'&&word[0]<='9' || word[0]=='-')
     {
         for(int i=1;i<word.length();i++)
         {
@@ -195,7 +195,7 @@ vector<Token> lexAna::lex_ana(vector<string> Statements)
                 if (c == "=" || c == "<" || c == ">"||c==":")
                 {
                     d=lineStr[++i];
-                    if((c == "=" && d == "=") ||(c == "<" && d == "=") ||(c == ">" && d == "=") ||(c == ":" && d == "="))
+                    if((c == "=" && d == "=") ||(c == "<" && d == "=") ||(c == ">" && d == "=") ||(c == "<" && d == ">"))
                     {
                         t[count].Lineshow=hang;
                         t[count].Lex=SignType;
